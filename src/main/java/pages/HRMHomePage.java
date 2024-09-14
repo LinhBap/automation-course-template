@@ -97,7 +97,7 @@ public class HRMHomePage extends BasePage {
 
     public void selectEthnic(String txt){
         findElementByLocator(ethnic).sendKeys(txt);
-        findElementByLocator(By.xpath("//div[@title='"+txt+"']")).click();
+//        findElementByLocator(By.xpath("//div[@title='"+txt+"']")).click();
     }
     public void clickSave() throws InterruptedException {
         findElementByLocator(saveButton).click();
