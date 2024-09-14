@@ -2,18 +2,17 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage extends BasePage {
-    public LoginPage(WebDriver givenDriver) {
+public class HRMLoginPage extends BasePage {
+    public HRMLoginPage(WebDriver givenDriver) {
         super(givenDriver);
         //TODO Auto-generated constructor stub
     }
 
-    By usernameInput = By.xpath("//input[@id='username']");
-    By passwordInput = By.xpath("//input[@id='password']");
-    By loginButton = By.xpath("//button[contains(text(),'Đăng nhập')]");
+    By usernameInput = By.id("username");
+    By passwordInput = By.id("password");
+    By loginButton = By.xpath("//button[contains(text(),'Log in')]");
 
-    By errorMessage=By.className("woocommerce-error");
-
+    By errorMessage=By.xpath("//div[@role='alert']");
 
     public void enterEmail(String txt){
 //        this.driver.findElement(usernameInput).sendKeys(txt);
@@ -32,6 +31,12 @@ public class LoginPage extends BasePage {
     }
 
     public String getErrorMessage(){
-        return findElementByLocator(errorMessage).getText();
+        try {
+            return findElementByLocator(errorMessage).getText();
+        } catch (Exception e) {
+            return "";
+        }
+
     }
+
 }
