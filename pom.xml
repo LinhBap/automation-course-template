@@ -73,8 +73,8 @@
                         <include>**/RunCucumberTest.java</include>
                     </includes>
                     <suiteXmlFiles>
-<!--                        <suiteXmlFile>src/test/resources/suites/${suite}.xml</suiteXmlFile>-->
-                        <suiteXmlFile>src/test/resources/suites/testNG.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/suites/${suite}.xml</suiteXmlFile>
+<!--                        <suiteXmlFile>src/test/resources/suites/testNG.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                 </configuration>
                 <dependencies>
